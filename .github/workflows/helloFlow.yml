@@ -1,13 +1,13 @@
-name: Hello Flow
-
-on:
-  push
-
+name: Simple Local
+on: push
 jobs:
-  first-job:
+  build-node:
     runs-on: ubuntu-latest
+    container: node:18
     steps:
-      - name: Diga oi
-        run: echo "Hello World!"
-      - name: Diga valeu
-        run: echo "Valeu - bye!"
+      - run: node --version
+      - run: npm --version
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: npm install --save moment
+      - run: node app.js
