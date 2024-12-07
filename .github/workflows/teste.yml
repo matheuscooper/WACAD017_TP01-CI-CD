@@ -31,4 +31,5 @@ jobs:
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         with:
-          token: ${{ secrets.CODECOV_TOKEN }} # Apenas para repositórios privados
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: matheuscooper/WACAD017_TP01-CI-CD
