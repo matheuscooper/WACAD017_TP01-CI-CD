@@ -2,7 +2,7 @@
     "name": "webacademy",
     "version": "1.0.0",
     "description": "Continious Deployment with Github Actions, DockerHub",
-    "type": "module",
+    "type": "commonjs",
 
     "scripts": {
         "lint": "eslint \"**/*.{js,jsx}\"",
