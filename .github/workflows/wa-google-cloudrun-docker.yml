@@ -1,6 +1,5 @@
 name: GCP Deploy
-on:
-  push
+on: push
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -10,7 +9,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Lint
-        id : lint-step
+        id: lint-step
         #continue-on-error: true
         run: npm run lint
       - name: check-lint
@@ -21,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Login to DockerHub
@@ -34,7 +33,7 @@ jobs:
         with:
           context: ./
           push: true
-          dockerfile: ./Dockerfile   # Specify the path to your Dockerfile here
+          dockerfile: ./Dockerfile # Specify the path to your Dockerfile here
           tags: moisesgc/webacademy:latest
   deploy:
     needs: lint
