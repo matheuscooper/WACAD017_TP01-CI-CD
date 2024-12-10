@@ -34,7 +34,7 @@ jobs:
           context: ./
           push: true
           dockerfile: ./Dockerfile # Specify the path to your Dockerfile here
-          tags: oliveiracooper73162/webacademy:latest
+          tags: docker.io/oliveiracooper73162/webacademy:latest
   deploy:
     needs: lint
     name: Setup Gcloud Account

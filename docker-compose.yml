@@ -2,7 +2,7 @@ version: "3"
 
 services:
   app:
-    image: docker.io/oliveiracooper73162/web_app:latest
+    image: docker.io/oliveiracooper73162/webacademy:latest
     container_name: webacademydemo
     restart: always
     ports:
