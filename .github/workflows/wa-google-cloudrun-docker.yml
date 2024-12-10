@@ -35,7 +35,7 @@ jobs:
           context: ./
           push: true
           dockerfile: ./Dockerfile
-          tags: docker.io/oliveiracooper73162/webacademy:latest
+          tags: oliveiracooper73162/webacademy:latest
 
   deploy:
     needs: build_docker
